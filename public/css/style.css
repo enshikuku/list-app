@@ -1,0 +1,14 @@
+@font-face {
+    font-family: Dosil-Regular;
+    src: url(Dosis-Regular.ttf);
+}
+@font-face {
+    font-family: Dosil-Bold;
+    src: url(Dosis-Bold.ttf);
+}
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Dosil-Regular;
+}
