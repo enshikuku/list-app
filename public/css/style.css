@@ -79,7 +79,6 @@ nav li {
     display: inline;
     font-size: 25px;
     margin-left: 10px;
-    border-radius: 5px;
 }
 nav li:hover {
     border-bottom: 2px solid white;
