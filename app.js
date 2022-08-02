@@ -14,13 +14,23 @@ app.use(express.static('public'))
 app.get('/', (req, res) => {
     res.render('index')
 })
+
 // about page
 app.get('/about', (req, res) => {
     res.render('about')
 })
+
+const items = [
+    {id: 1, name: 'Coffee'},
+    {id: 2, name: 'Sugar'},
+    {id: 3, name: 'Milk'},
+    {id: 4, name: 'Honey'},
+    {id: 5, name: 'Bread'}
+]
+
 // list items
 app.get('/list', (req, res) => {
-    res.render('list')
+    res.render('list', {items: items})
 })
 // add items
 app.get('/add', (req, res) => {

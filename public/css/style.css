@@ -65,20 +65,21 @@ nav {
     justify-content: space-between;
     align-items: center;
     background-color: #29a0b1;
-    height: 60px;
+    height: 70px;
+}
+#logo {
+    height: 40px;
+    border-radius: 10px;
 }
 nav a {
     text-decoration: none;
     color: white;
 }
-nav h1 {
-    font-size: 35px;
-    font-family: Dosis-Bold;
-}
 nav li {
     display: inline;
     font-size: 25px;
     margin-left: 10px;
+    border-radius: 5px;
 }
 nav li:hover {
     border-bottom: 2px solid white;
@@ -99,14 +100,21 @@ nav li:hover {
     justify-content: center;
     gap: 6px;
 }
+#about #tech-stack img {
+    height: 64px;
+}
 #about #tech-stack p {
     margin-top: 20px;
     font-size: 18px;
     padding: 8px 10px;
-    border: 1px solid #167d7f;
+    border: 2px solid #2fc3da;
     border-radius: 5px;
     width: max-content;
+    background-color: #2fc3da;
 }
+#about #tech-stack p:hover {
+    background-color: #00ddff;
+} 
 #page-not-found {
     margin: 0 auto;
     width: fit-content;
@@ -136,6 +144,10 @@ nav li:hover {
     color: #fff;
     border-radius: 5px;
 }
+#add-item input[type='submit']:hover {
+    background-color: #fff;
+    color: #29a0b1;
+}
 #items {
     margin-top: 15px;
     font-size: 25px;
@@ -150,4 +162,13 @@ nav li:hover {
     width: 10px;
     margin-right: 20px;
     font-family: Dosis-Bold;
+}
+#items .item {
+    padding: 15px;
+    border-bottom: 1px solid #adb3bc;
+    margin-bottom: 5px;
+}
+#items .item span {
+    width: 10px;
+    margin-right: 20px;
 }
