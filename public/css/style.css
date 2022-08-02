@@ -1,14 +1,153 @@
 @font-face {
-    font-family: Dosil-Regular;
+    font-family: Dosis-Regular;
     src: url(Dosis-Regular.ttf);
 }
 @font-face {
-    font-family: Dosil-Bold;
+    font-family: Dosis-Bold;
     src: url(Dosis-Bold.ttf);
 }
 * {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
-    font-family: Dosil-Regular;
+    font-family: Dosis-Regular;
+}
+.container{
+    padding-left: 150px;
+    padding-right: 150px;
+}
+#home {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+#home > div {
+    display: flex;
+    align-items: center;
+}
+
+#home .col {
+    width: 50%;
+}
+#home img {
+    width: 100%;
+}
+#home h1 {
+    font-family: Dosis-Bold;
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+#home p {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+#home a {
+    text-decoration: none;
+    background-color: #29a0b1;
+    border: 1px solid #29a0b1;
+    color: white;
+    font-size: 25px;
+    padding: 10px 12px;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: block;
+    width: max-content;
+    letter-spacing: 3px;
+}
+
+#home a:hover {
+    background-color: white;
+    color: #29a0b1;
+    
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #29a0b1;
+    height: 60px;
+}
+nav a {
+    text-decoration: none;
+    color: white;
+}
+nav h1 {
+    font-size: 35px;
+    font-family: Dosis-Bold;
+}
+nav li {
+    display: inline;
+    font-size: 25px;
+    margin-left: 10px;
+}
+nav li:hover {
+    border-bottom: 2px solid white;
+}
+ 
+#about {
+    margin-top: 40px;
+}
+
+#about > p {
+    font-size: 27px;
+    text-align: center;
+    width: 40%;
+    margin: 0 auto;
+}
+#about #tech-stack {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+}
+#about #tech-stack p {
+    margin-top: 20px;
+    font-size: 18px;
+    padding: 8px 10px;
+    border: 1px solid #167d7f;
+    border-radius: 5px;
+    width: max-content;
+}
+#page-not-found {
+    margin: 0 auto;
+    width: fit-content;
+    text-align: center;
+    /* height: 70vh; */
+}
+#page-not-found img {   
+    width: 50%;
+}
+#add-item form {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+#add-item input {
+    font-size: 26px;
+    padding: 8px;
+}
+#add-item input[type='submit'] {
+    width: fit-content;
+    letter-spacing: 3px;
+    font-size: 18px;
+    margin: 10px auto 0;
+    background-color: #29a0b1;
+    border: 1px solid #29a0b1;
+    padding: 10px 14px;
+    color: #fff;
+    border-radius: 5px;
+}
+#items {
+    margin-top: 15px;
+    font-size: 25px;
+}
+#items #heading {
+    background-color: #adb3bc;
+    color: #fff;
+    font-family: Dosis-Bold;
+    padding: 15px;
+}
+#items #heading span {
+    width: 10px;
+    margin-right: 20px;
+    font-family: Dosis-Bold;
 }

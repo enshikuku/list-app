@@ -9,27 +9,31 @@ app.set('view engine', 'ejs')
 // specify where to source for static files
 app.use(express.static('public'))
 
-const items = [
-    {id: 1, name: 'mangoes'},
-    {id: 2, name: 'bananas'},
-    {id: 3, name: 'pencil'},
-    {id: 4, name: 'pen'},
-    {id: 5, name: 'notebook'}
-]
+
 
 app.get('/', (req, res) => {
     res.render('index')
 })
-
+// about page
 app.get('/about', (req, res) => {
-    res.render('about', {
-        data: 'this is data from server',
-        items: items
-    })
+    res.render('about')
+})
+// list items
+app.get('/list', (req, res) => {
+    res.render('list')
+})
+// add items
+app.get('/add', (req, res) => {
+    res.render('add')
 })
 // 404  error
 
 app.get('*', (req, res) => {
-    res.render('pnf')
+    res.render('404')
 })
-app.listen(3000)
+
+const PORT = process.env.PORT || 3000
+
+app.listen(PORT, () => {
+    console.log('app is live')
+})

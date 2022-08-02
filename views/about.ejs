@@ -1,39 +1,21 @@
 <%- include('partials/header') %>
+
     <%- include('partials/nav') %>
-    <h1>About Page</h1>
-    <script src="/js/data.js"></script>
-    <!-- Create a variable -->
-    <% const marks = [10,39, 87, 26] %>
-    <% let name = 'Project High Jump' %>
-    <!-- Displaying output -->
-    <p><%= name %></p>
-    
-    <!-- Display Marks above 50 as h1 elements-->
-    <% for(let mark of marks){ %>
-        <% if(mark > 50) { %>
-            <h1><%= mark %></h1>
-        <% } %>
-    <% } %>
-    <h2><%= data %></h2>
-    <table>
-        <thead>
-            <tr>
-                <th>id</th>
-                <th>name
 
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            
-            <% for(let item of items){ %>
+    <main id="about" class="container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat enim, animi, repudiandae dolor dolorem quod exercitationem sit totam id illum assumenda dicta et ea eum. Similique neque cum, quisquam eius ratione libero dignissimos iste necessitatibus labore molestias esse velit odit!</p>
+        <div id="tech-stack">
+            <p>HTML</p>
+            <p>CSS</p>
+            <p>JavaScript</p>
+            <p>Express</p>
+            <p>NodeJS</p>
+            <p>MySQL</p>
+        </div>
+    </main>
 
-                <tr>
-                    <td><%= item.id %></td>
-                    <td><%= item.name %></td>
-                </tr>
-                
-            <% } %>
-        </tbody>
-    </table>
+
+
+
+
 <%- include('partials/footer') %>
