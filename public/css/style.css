@@ -118,7 +118,6 @@ nav li:hover {
     margin: 0 auto;
     width: fit-content;
     text-align: center;
-    /* height: 70vh; */
 }
 #page-not-found img {   
     width: 50%;
@@ -170,4 +169,20 @@ nav li:hover {
 #items .item span {
     width: 10px;
     margin-right: 20px;
+}
+
+
+@media only screen and (max-width: 730px) {
+    .container{
+        padding-left: 25px;
+        padding-right: 25px;
+    }  
+    #home > div {
+        display: flex;
+        flex-direction: column;
+    }  
+    #home .col {
+        width: 100%;
+    }
+    
 }
