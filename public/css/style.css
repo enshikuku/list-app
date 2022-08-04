@@ -253,7 +253,7 @@ nav li:hover {
         border-radius: 10px;
         padding: 5px;
         font-size: 17px;
-        font-family: Dosis-Bold;
+        font-weight: lighter;
         letter-spacing: 2px;
     }    
 }
