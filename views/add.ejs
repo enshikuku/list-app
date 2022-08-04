@@ -1,12 +1,9 @@
 <%- include('partials/header') %>
-
     <%- include('partials/nav') %>
     <main id="add-item" class="container">
-        <form action="">
-            
+        <form action="/add" method="post">
             <input type="text" name="newItem" placeholder="Enter Item...">
             <input type="submit" value="Save Item">
         </form>
     </main>
-
 <%- include('partials/footer') %>

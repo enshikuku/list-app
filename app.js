@@ -1,7 +1,16 @@
-import express from "express"
+import express from 'express'
+import mysql from 'mysql'
 
 // create an express application
 const app = express()
+
+//create a connection
+const connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database: 'list'
+})
 
 // set template engine
 app.set('view engine', 'ejs')
@@ -9,8 +18,10 @@ app.set('view engine', 'ejs')
 // specify where to source for static files
 app.use(express.static('public'))
 
+// config to access form information
+app.use(express.urlencoded({extended: false}))
 
-
+// homepage
 app.get('/', (req, res) => {
     res.render('index')
 })
@@ -20,22 +31,33 @@ app.get('/about', (req, res) => {
     res.render('about')
 })
 
-const items = [
-    {id: 1, name: 'Coffee'},
-    {id: 2, name: 'Sugar'},
-    {id: 3, name: 'Milk'},
-    {id: 4, name: 'Honey'},
-    {id: 5, name: 'Bread'}
-]
-
 // list items
 app.get('/list', (req, res) => {
-    res.render('list', {items: items})
+
+    let sql = 'SELECT * FROM item'
+
+    connection.query(
+        sql, (error, results) => {
+            res.render('list', {items: results})
+        }
+    )  
 })
-// add items
+// display add item form
 app.get('/add', (req, res) => {
     res.render('add')
 })
+
+// submit add item form
+app.post('/add', (req, res) => {
+
+    let sql = 'INSERT INTO item (name) VALUES (?)'
+    connection.query(
+        sql, [req.body.newItem], (error, results) => {
+            res.redirect('/list')
+        }
+    )
+})
+
 // 404  error
 
 app.get('*', (req, res) => {
