@@ -122,16 +122,16 @@ nav li:hover {
 #page-not-found img {   
     width: 50%;
 }
-#add-item form {
+#add-item form, #edit-item form {
     margin-top: 15px;
     display: flex;
     flex-direction: column;
 }
-#add-item input {
+#add-item input, #edit-item input {
     font-size: 26px;
     padding: 8px;
 }
-#add-item input[type='submit'] {
+#add-item input[type='submit'], #edit-item input[type='submit'] {
     width: fit-content;
     letter-spacing: 3px;
     font-size: 18px;
@@ -142,7 +142,7 @@ nav li:hover {
     color: #fff;
     border-radius: 5px;
 }
-#add-item input[type='submit']:hover {
+#add-item input[type='submit']:hover, #edit-item input[type='submit']:hover {
     background-color: #fff;
     color: #29a0b1;
 }

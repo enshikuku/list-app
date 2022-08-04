@@ -57,6 +57,30 @@ app.post('/add', (req, res) => {
         }
     )
 })
+//display edit item form
+app.get('/edit/:id', (req, res) => {
+
+    let sql = 'SELECT * FROM Item WHERE id =?'
+    connection.query(
+        sql, [parseInt(req.params.id)],
+        (error, results) => {
+            res.render('edit', {item: results[0]})
+        }
+    )
+
+})
+// submit edit item form
+app.post('/edit/:id', (req, res) => {
+
+    let sql = 'UPDATE Item SET name = ? WHERE id = ?'
+    connection.query(
+        sql, [req.body.newItem, parseInt(req.params.id)],
+        (error, results) => {
+            res.redirect('/list')
+        }
+    )
+
+})
 
 // 404  error
 
