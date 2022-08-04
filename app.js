@@ -81,6 +81,16 @@ app.post('/edit/:id', (req, res) => {
     )
 
 })
+// DELETE ITEM
+app.post('/delete/:id', (req, res) => {
+    let sql = 'DELETE FROM Item WHERE id = ?'
+    connection.query (
+        sql, [parseInt(req.params.id)],
+        (error, results) => {
+            res.redirect('/list')
+        }
+    )
+})
 
 // 404  error
 

@@ -4,9 +4,12 @@
         <p id="heading"><span>ID</span> Item</p>
         <% items.forEach(item => { %>
             <div class="item">
-                <p><span class="item-id"><%= item.id %></span> <%= item.name %></p>
+                <p><span class="item-id"><%= items.indexOf(item) + 1 %>.</span> <%= item.name %></p>
                 <div class="btns">
                     <a href="/edit/<%= item.id %>" class="edit-btn">Edit</a>
+                    <form action="/delete/<%= item.id %>" method="post">
+                        <input type="submit" value="Delete" class="delete-btn">
+                    </form>
                 </div>
             </div>
         <% }) %>

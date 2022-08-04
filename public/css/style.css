@@ -186,6 +186,24 @@ nav li:hover {
     background-color: #016236;
     border: 1px solid #016236;
 } 
+#items .delete-btn {
+    text-decoration: none;
+    color: #fff;
+    background-color: #e4021b;
+    border: 1px solid #e4021b;
+    border-radius: 10px;
+    padding: 5px 15px;
+    font-size: 18px;
+    font-family: Dosis-Bold;
+    margin-left: 15px;
+}
+#items .delete-btn:hover {
+    background-color: #D01110;
+    border: 1px solid #D01110;
+} 
+#items .btns {
+    display: flex;
+}
 
 
 @media only screen and (max-width: 730px) {
@@ -200,5 +218,42 @@ nav li:hover {
     #home .col {
         width: 100%;
     }
-    
+    #about > p {
+        font-size: 24px;
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+    }
+    #about #tech-stack {
+        width: 80%;
+        margin: 20px auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+    }
+    #about #tech-stack img {
+        height: 50px;
+    }
+    #items .item {
+        padding: 15px;
+        border-bottom: 1px solid #adb3bc;
+        margin-bottom: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-size: 20px;
+    }
+    #items .btns {
+        display: flex;
+        margin-top: 5px;
+    }
+    #items .edit-btn, #items .delete-btn {
+        border-radius: 10px;
+        padding: 5px;
+        font-size: 17px;
+        font-family: Dosis-Bold;
+        letter-spacing: 2px;
+    }    
 }
