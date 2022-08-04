@@ -3,7 +3,12 @@
     <main id="items" class="container">
         <p id="heading"><span>ID</span> Item</p>
         <% items.forEach(item => { %>
-            <p class="item"><span><%= item.id %></span> <%= item.name %></p>
+            <div class="item">
+                <p><span class="item-id"><%= item.id %></span> <%= item.name %></p>
+                <div class="btns">
+                    <a href="" class="edit-btn">Edit</a>
+                </div>
+            </div>
         <% }) %>
     </main>
 <%- include('partials/footer') %>

@@ -165,11 +165,27 @@ nav li:hover {
     padding: 15px;
     border-bottom: 1px solid #adb3bc;
     margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
 }
-#items .item span {
+#items .item-id {
     width: 10px;
     margin-right: 20px;
 }
+#items .edit-btn {
+    text-decoration: none;
+    color: #fff;
+    background-color: #03a65a;
+    border: 1px solid #03a65a;
+    border-radius: 10px;
+    padding: 5px 15px;
+    font-size: 18px;
+    font-family: Dosis-Bold;
+}
+#items .edit-btn:hover {
+    background-color: #016236;
+    border: 1px solid #016236;
+} 
 
 
 @media only screen and (max-width: 730px) {
